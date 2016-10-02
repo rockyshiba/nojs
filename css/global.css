@@ -64,6 +64,7 @@ html {
 }
 
 body{
+	background: white;
 	position: relative;
 	font-family: 'Arvo', serif;
 	line-height: 120%;
@@ -86,10 +87,23 @@ h3{
 }
 
 header{
-	margin-top: 10px;
 	position: fixed;
 	width: 100%;
 	z-index: 1000;
+	background-color: white;
+	top: 0px;
+}
+
+#header-nav--menu---checkbox:checked + label, main{
+	transition: right 0.5s;
+}
+
+footer{
+	min-width: 100%;
+	clear: both;
+	display: block;
+	bottom: 0px;
+	top: 10%;
 }
 
 .page-wrapper{
@@ -110,6 +124,7 @@ header{
 }
 
 #header-logo{
+	margin-top: 10px;
 	font-weight: bold;
 	font-size: 1.8em;
 	text-align: center;
@@ -121,6 +136,16 @@ header{
 	color: white;
 	background-color: grey;
 	margin-top: 3px;
+}
+
+#header-nav--menu---checkbox{
+	position: fixed;
+	z-index: -1000;
+	left: -10000px;
+}
+
+#header-nav--menu---button{
+	display: none;
 }
 
 #header-nav li{
@@ -136,6 +161,7 @@ header{
 
 #header-nav--mobile{
 	position: fixed;
+	right: -100px;
 }
 
 @media screen and (max-width: 420px) {
@@ -143,11 +169,34 @@ header{
 		margin: 8px;
 	}
 	
-	#header-nav{
+	#header-nav--desktop{
 		display: none;
 	}
 	
+	#header-nav--menu---button{
+		display: block;
+	}
+
 	#header-nav li{
 		margin: 5px 10px 10px 5px;
+	}
+
+	/*#header-nav--mobile{
+		right: 0px;
+	}*/
+
+	#header-nav--menu---checkbox:checked ~ main{
+		position: fixed;
+		right: 100px;
+	}
+
+	#header-nav--menu---checkbox:checked + #header-nav--mobile{
+		right: 0px;
+	}
+
+	footer{
+		top: 10%;
+		clear: both;
+		position: relative;
 	}
 }
