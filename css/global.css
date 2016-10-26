@@ -94,9 +94,14 @@ header{
 	top: 0px;
 }
 
-#header-nav--menu---checkbox:checked + label, main{
-	transition: right 0.5s;
+main{
+	margin-top: 90px;
+	transition: all 1s;
 }
+
+/*#header-nav--menu---checkbox:checked + label, main{
+	transition: right 0.5s;
+}*/
 
 footer{
 	min-width: 100%;
@@ -166,7 +171,8 @@ footer{
 
 @media screen and (max-width: 420px) {
 	main{
-		margin: 8px;
+		margin-right: 8px;
+		margin-left: 8px;
 	}
 	
 	#header-nav--desktop{
@@ -186,8 +192,22 @@ footer{
 	}*/
 
 	#header-nav--menu---checkbox:checked ~ main{
-		position: fixed;
+		position: relative; /*relative moves the element, abosulte squishes the element*/
 		right: 100px;
+	}
+
+	#header-nav--menu---checkbox:checked ~ section{
+		box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+	}
+
+	#header-nav--menu---checkbox:checked > header > nav{
+		right: 0px;
+	}
+
+	#header-nav--menu---checkbox:checked ~ footer{
+		bottom: 10%;
+		position: absolute;
+		display: none;
 	}
 
 	#header-nav--menu---checkbox:checked + #header-nav--mobile{
@@ -195,7 +215,8 @@ footer{
 	}
 
 	footer{
-		top: 10%;
+		/*top: 10%;*/
+		bottom: 10%;
 		clear: both;
 		position: relative;
 	}
