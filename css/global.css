@@ -68,6 +68,7 @@ body{
 	position: relative;
 	font-family: 'Arvo', serif;
 	line-height: 120%;
+	overflow-x: hidden;
 }
 
 h1, h2, h3{
@@ -96,7 +97,7 @@ header{
 
 main{
 	margin-top: 90px;
-	transition: all 1s;
+	transition: all 0.4s;
 }
 
 /*#header-nav--menu---checkbox:checked + label, main{
@@ -166,7 +167,14 @@ footer{
 
 #header-nav--mobile{
 	position: fixed;
-	right: -100px;
+	right: 0px;
+	top: 90px;
+	z-index: -100;
+}
+
+#site-wrapper{
+	background-color: white;
+	z-index: 100;
 }
 
 @media screen and (max-width: 420px) {
@@ -191,12 +199,17 @@ footer{
 		right: 0px;
 	}*/
 
-	#header-nav--menu---checkbox:checked ~ main{
-		position: relative; /*relative moves the element, abosulte squishes the element*/
+	#header-nav--menu---checkbox:checked ~ #site-wrapper{
+		position: relative; /*relative moves the element, absolute squishes the element*/
 		right: 100px;
+		transition: right 0.3s;
 	}
 
-	#header-nav--menu---checkbox:checked ~ section{
+	#header-nav--menu---checkbox + label, #site-wrapper{
+		transition: right 0.3s;
+	}
+
+	#header-nav--menu---checkbox:checked ~ #site-wrapper{
 		box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 	}
 
