@@ -63,6 +63,10 @@ html {
   box-sizing: inherit;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 .nav-mobile{
     list-style: none;
     background: #111;
@@ -88,6 +92,7 @@ html {
     background-image: -webkit-linear-gradient(top left, rgb(254, 255, 255) 0%, rgb(221, 241, 249) 35%, rgb(160, 216, 239) 100%);
     background-image: -o-linear-gradient(top left, rgb(254, 255, 255) 0%, rgb(221, 241, 249) 35%, rgb(160, 216, 239) 100%);
     background-image: linear-gradient(to bottom right, rgb(254, 255, 255) 0%, rgb(221, 241, 249) 35%, rgb(160, 216, 239) 100%);
+    overflow-x: hidden;
 }
 
 /*hides the input tag*/
@@ -99,10 +104,28 @@ html {
 label[for="nav-trigger"]{
     position: fixed;
     top: 15px;
-    left: 15px;
+    right: 50%;
     z-index: 200;
     width: 30px;
     height: 30px;
     cursor: pointer;
     background-color: lawngreen;
+}
+
+.nav-trigger:checked + label{
+    left: auto;
+}/*Moves the adjacent label to the right after checking the checkbox*/
+
+.nav-trigger:checked ~ .site-wrapper{
+    left: -100px;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}/*Moves the general sibling .site-wrapper*/
+
+.nav-trigger + label, .site-wrapper{
+    transition: all 0.2s;
+}
+
+/*Styling*/
+.nav-mobile--list{
+    float: right;
 }
