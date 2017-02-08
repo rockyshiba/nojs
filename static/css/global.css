@@ -89,10 +89,11 @@ body{
     bottom: 100%;
     left: 0;
     padding: 4em;
-    background-image: -webkit-linear-gradient(top left, rgb(254, 255, 255) 0%, rgb(221, 241, 249) 35%, rgb(160, 216, 239) 100%);
+    /*background-image: -webkit-linear-gradient(top left, rgb(254, 255, 255) 0%, rgb(221, 241, 249) 35%, rgb(160, 216, 239) 100%);
     background-image: -o-linear-gradient(top left, rgb(254, 255, 255) 0%, rgb(221, 241, 249) 35%, rgb(160, 216, 239) 100%);
-    background-image: linear-gradient(to bottom right, rgb(254, 255, 255) 0%, rgb(221, 241, 249) 35%, rgb(160, 216, 239) 100%);
+    background-image: linear-gradient(to bottom right, rgb(254, 255, 255) 0%, rgb(221, 241, 249) 35%, rgb(160, 216, 239) 100%);*/
     overflow-x: hidden;
+    outline: 1px solid black;
 }
 
 /*hides the input tag*/
@@ -106,7 +107,7 @@ label[for="nav-trigger"]{
     top: 15px;
     right: 50%;
     z-index: 200;
-    width: 30px;
+    /*width: 30px;*/
     height: 30px;
     cursor: pointer;
     background-color: lawngreen;
