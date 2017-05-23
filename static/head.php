@@ -2,4 +2,4 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <link type="stylesheet" href="./static/style/global.css" />
+    <link type="text/css" rel="stylesheet" href="./static/style/global.css" />

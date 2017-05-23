@@ -2,7 +2,11 @@
 </head>
 <body>
     <?php include "./static/mobile-nav.php"; ?>
-    <?php include "./static/header.php"; ?>
-    <?php include ".static/footer.php"; ?>
+    <div class="site-wrapper">
+        <?php include "./static/header.php"; ?>
+        <main>
+        </main>
+        <?php include ".static/footer.php"; ?>
+    </div>
 </body>
 </html>
