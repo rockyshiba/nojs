@@ -1,0 +1,53 @@
+html, body{
+    min-height: 100%;
+    background-color: goldenrod;
+    padding: 0;
+    position: relative;
+}
+
+footer{
+    min-height: 200px;
+    background-color: green;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.site-wrapper{
+    display: block;
+    z-index: 2;
+    background-color: lime;
+    min-height: 100%;
+    position: relative;
+	top: 0; /*for smooth animation, an origin of the element must be declared. Because I want the element to move from the top, I'm going to start from 0 but this can be any number*/
+	left: 0;
+	width: 100%;
+	-webkit-transition: top 0.4s; /*safari*/
+    transition: top 0.4s;
+    overflow-x: hidden;
+}
+
+input#mobile-nav--trigger{
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
+input#mobile-nav--trigger:checked ~ .site-wrapper{
+    top: 200px;
+}
+
+/*#mobile-nav--trigger + label, .site-wrapper{
+	-webkit-transition: all 0.4s;
+    transition: all 0.4s;
+
+}*/
+
+nav#mobile-nav{
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}

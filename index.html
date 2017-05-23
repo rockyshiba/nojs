@@ -1,106 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ghosteacher</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" type="text/css" href="css/global.css">
-        <link rel="stylesheet" type="text/css" href="css/homepage.css">
+        <meta charset='utf-8'>
+        <link rel="stylesheet" type="text/css" href="./static/style/reset.css">
+        <link rel="stylesheet" type="text/css" href="./static/style/menu.css">
     </head>
     <body>
-        <nav id="header-nav--mobile">
+        <nav id="mobile-nav">
             <ul>
-                <li><a href="http://www.ghosteacher.com/nojs">Home</a></li>
-                <li><a href="http://www.ghosteacher.com/nojs/projects">Projects</a></li>
-                <li><a href="http://www.ghosteacher.com/blog">Blog</a></li>
-                <li><a href="http://www.ghosteacher.com/nojs/contact">Contact</a></li>
+                <li>nav item 1</li>
+                <li>nav item 2</li>
+                <li>nav item 3</li>
             </ul>
         </nav>
-        <input type="checkbox" id="header-nav--menu---checkbox">
-        <div id="site-wrapper"><!--BEGIN site-wrapper-->
-        <header>
-            <div id="header-logo">
-                    GHOSTEACHER
-            </div>
-            <nav id="header-nav">
-                <div class="page-wrapper"><!--PAGE WRAPPER BEGIN-->
-                    <ul id="header-nav--desktop">
-                        <li><a href="http://www.ghosteacher.com/nojs">Home</a></li>
-                        <li><a href="http://www.ghosteacher.com/nojs/projects">Projects</a></li>
-                        <li><a href="http://www.ghosteacher.com/blog">Blog</a></li>
-                        <li><a href="http://www.ghosteacher.com/nojs/contact">Contact</a></li>
-                    </ul>
-					<!--<input type="checkbox" id="header-nav--menu---checkbox">-->
-					<label id="header-nav--menu---button" for="header-nav--menu---checkbox">MENU</label>
-                </div>					<!--PAGE WRAPPER END-->    
-            </nav>
-        </header>
-        <main>
-            <section id="main-text">
-                <div class="page-wrapper"><!--PAGE WRAPPER BEGIN-->
-                    <p id="about-bio">Hi there and thanks for visiting my site!<br><br>My name is Lee, a full stack web developer based in Toronto. In addition to the many programming languages I use in my work, I also know a few human ones from having taught English in Korea. Always learning something new, I yearn to known what is unknown. A blank page isn't empty, it's yet to be written.</p>
-                    <br>
-                    <p>If you'd like to learn more about my previous work then <a href="http://www.ghosteacher.com/nojs/projects">click here</a>.</p>
-                    <br>
-                    <nav id="about-links">
-                        <ul>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">GitHub</a></li>
-                        </ul>
-                    </nav>
-                    <div>
-                        <h2 id="about-header">Stuff I can do</h2>
-                        <div id="about-technologies" class="half-column">
-                            <h3>Code</h3>
-                            <ul class="bulleted-list">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
-                                <li>C#</li>
-                                <li>Python</li>
-                                <li>PHP</li>
-                                <li>SQL</li>
-                            </ul>
-                        </div>
-                        <div id="about-libraries" class="half-column">
-                            <h3>Libraries</h3>
-                            <ul class="bulleted-list">
-                                <li>jQuery</li>
-                                <li>ThreeJS</li>
-                            </ul>
-                        </div>
-                        <div id="about-frameworks" class="half-column">
-                            <h3>Frameworks</h3>
-                            <ul class="bulleted-list">
-                                <li>.NET (MVC)</li>
-                                <li>Django</li>
-                            </ul>
-                        </div>
-                        <div id="about-server" class="half-column">
-                            <h3>Server side</h3>
-                            <ul class="bulleted-list">
-                                <li>Apache</li>
-                                <li>phpMyAdmin</li>
-                                <li>MySQL</li>
-                                <li>MSSQL</li>
-                                <li>Azure</li>
-                                <li>Google Cloud</li>
-                            </ul>
-                        </div>
-                        <div id="about-cms" class="half-column">
-                            <h3>CMS</h3>
-                            <ul class="bulleted-list">
-                                <li>Wordpress</li>
-                                <li>Drupal (some)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div><!--PAGE WRAPPER END-->
-            </section>
-        </main>
-        <footer>
-            &copy; 2016
-        </footer>
-        </div><!--END site-wrapper-->
+        <input type="checkbox" id="mobile-nav--trigger" value="">
+        <div class="site-wrapper">
+            <header>
+                This is the header
+                <label for="mobile-nav--trigger">MENU</label>
+            </header>
+            <main>
+                This is the main
+            </main>
+            <footer>
+                This is the footer
+            </footer>
+        </div>
     </body>
 </html>
