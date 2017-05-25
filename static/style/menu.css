@@ -5,6 +5,16 @@ html, body{
     position: relative;
 }
 
+header{
+    text-align: center;
+    vertical-align: center;
+}
+
+header > label[for='mobile-nav--trigger']{
+    display: block;
+    height: 1.3em;
+}
+
 footer{
     min-height: 200px;
     background-color: green;
@@ -49,5 +59,14 @@ nav#mobile-nav{
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: -1;
+    z-index: 0;
 }
+
+/*nav#mobile-nav > ul > li:first-child{
+    margin-top: 15px;
+}
+
+nav#mobile-nav > ul > li{
+    margin-bottom: 15px;
+    border-top: 1px solid black;
+}*/
